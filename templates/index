@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>IDS</title>
+  <link rel="stylesheet" href="../static/style.css">
+
+</head>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+<body style="background-color: #313131;">
+
+  <header>INTRUSION DETECTION SYSTEM</header>
+  <form action="/previous-logs" style="margin-top: 7%; margin-right: 10px;">
+    <input type="submit" value="View all previous logs">
+  </form>
+
+  
+  <ul>
+    {% for item in data %}
+    <li> <b>{{ item }}</b></li>
+    {% endfor %}
+  </ul>
+
+    <form action="/start" style="margin-right: 6px;">
+      <input type="text" name="interface"><br>
+      <input type="submit" value="Start Scanning">
+    </form>
+
+    <form action="/alerts" style="margin-top: 1%; margin-right: 10px;">
+      <input type="submit" value="View Your Logs">
+    </form>
+
+
+
+
+
+  <script type="text/javascript">
+    setTimeout(function () {
+      location.reload();
+    }, 5000);
+  </script>
+</body>
+
+</html>
